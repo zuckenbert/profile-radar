@@ -1,0 +1,12 @@
+{
+  "name": "profile-radar",
+  "version": "0.4.0",
+  "private": true,
+  "description": "Chrome extension that keeps a local log of who viewed your LinkedIn profile.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/",
+    "i18n:sync": "node scripts/sync-i18n-fallback.mjs",
+    "icons": "python3 scripts/make_icons.py"
+  }
+}

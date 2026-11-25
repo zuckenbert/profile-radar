@@ -1,0 +1,312 @@
+{
+  "extName": {
+    "message": "Profile Radar"
+  },
+  "extShortName": {
+    "message": "Profile Radar"
+  },
+  "extDescription": {
+    "message": "Keeps a local log of who viewed your LinkedIn profile. Read-only, once a day, inside your own browser."
+  },
+  "popupEyebrow": {
+    "message": "LinkedIn · daily"
+  },
+  "popupHeading": {
+    "message": "Who viewed your profile"
+  },
+  "popupSub": {
+    "message": "Read automatically from LinkedIn, once a day."
+  },
+  "popupSubOwner": {
+    "message": "$OWNER$’s profile · read once a day.",
+    "placeholders": {
+      "owner": {
+        "content": "$1",
+        "example": "Alex Kim"
+      }
+    }
+  },
+  "statsLabel": {
+    "message": "Summary"
+  },
+  "statWeek": {
+    "message": "Last 7 days"
+  },
+  "statStored": {
+    "message": "Stored"
+  },
+  "statTotal": {
+    "message": "On LinkedIn"
+  },
+  "statusNever": {
+    "message": "No reads yet"
+  },
+  "statusLast": {
+    "message": "Last read $AGO$ · $COUNT$ new",
+    "placeholders": {
+      "ago": {
+        "content": "$1",
+        "example": "2h ago"
+      },
+      "count": {
+        "content": "$2",
+        "example": "3"
+      }
+    }
+  },
+  "errLoggedOut": {
+    "message": "LinkedIn is logged out"
+  },
+  "errEmptyList": {
+    "message": "List did not load"
+  },
+  "errNoResponse": {
+    "message": "Page did not respond"
+  },
+  "errGeneric": {
+    "message": "Read failed"
+  },
+  "pushLocalOnly": {
+    "message": "Local only"
+  },
+  "pushRejected": {
+    "message": "Endpoint rejected ($STATUS$)",
+    "placeholders": {
+      "status": {
+        "content": "$1",
+        "example": "500"
+      }
+    }
+  },
+  "pushNetwork": {
+    "message": "network"
+  },
+  "pushQueued": {
+    "message": "$COUNT$ queued",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "pushUpToDate": {
+    "message": "Endpoint up to date"
+  },
+  "warnGapTitle": {
+    "message": "Some viewers may have been missed."
+  },
+  "warnGapBody": {
+    "message": "Click Read now to complete the list."
+  },
+  "tabRecent": {
+    "message": "Recent"
+  },
+  "tabReturning": {
+    "message": "Returning"
+  },
+  "tabAnonymous": {
+    "message": "Anonymous"
+  },
+  "emptyRecentTitle": {
+    "message": "Nothing here yet"
+  },
+  "emptyRecentBody": {
+    "message": "Open LinkedIn and click Read now for the first read."
+  },
+  "emptyReturningTitle": {
+    "message": "Nobody has come back yet"
+  },
+  "emptyReturningBody": {
+    "message": "People who view your profile more than once show up here."
+  },
+  "emptyAnonymousTitle": {
+    "message": "No anonymous viewers"
+  },
+  "emptyAnonymousBody": {
+    "message": "Viewers in semi-private mode show up only with a job title or a company."
+  },
+  "unnamedViewer": {
+    "message": "Unnamed viewer"
+  },
+  "tagVisits": {
+    "message": "$COUNT$ visits",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "tagNew": {
+    "message": "new"
+  },
+  "agoNow": {
+    "message": "just now"
+  },
+  "agoHours": {
+    "message": "$N$h ago",
+    "placeholders": {
+      "n": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "agoDays": {
+    "message": "$N$d ago",
+    "placeholders": {
+      "n": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "agoWeeks": {
+    "message": "$N$w ago",
+    "placeholders": {
+      "n": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "agoMonths": {
+    "message": "$N$mo ago",
+    "placeholders": {
+      "n": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "btnReadNow": {
+    "message": "Read now"
+  },
+  "btnReading": {
+    "message": "Reading…"
+  },
+  "btnCsv": {
+    "message": "Export CSV"
+  },
+  "linkSettings": {
+    "message": "Settings"
+  },
+  "optionsHeading": {
+    "message": "Settings"
+  },
+  "optionsSub": {
+    "message": "The extension only reads your own list of profile viewers. It never clicks, sends messages or visits profiles."
+  },
+  "secReading": {
+    "message": "Reading"
+  },
+  "optEnabled": {
+    "message": "Read once a day, automatically"
+  },
+  "optOwner": {
+    "message": "Whose profile is this"
+  },
+  "optOwnerPlaceholder": {
+    "message": "Name shown in the popup (optional)"
+  },
+  "optHourFrom": {
+    "message": "From (hour)"
+  },
+  "optHourTo": {
+    "message": "Until (hour)"
+  },
+  "optWindowHint": {
+    "message": "The exact time is picked at random inside this window every day. If LinkedIn is not open within 3 hours of that time, the read happens anyway in a background tab."
+  },
+  "secDestination": {
+    "message": "Endpoint (optional)"
+  },
+  "optEndpoint": {
+    "message": "HTTPS endpoint that receives new viewers"
+  },
+  "optToken": {
+    "message": "Bearer token (optional)"
+  },
+  "optTokenPlaceholder": {
+    "message": "Sent as Authorization: Bearer <token>"
+  },
+  "optDestHint": {
+    "message": "Without an endpoint the list stays in this browser and leaves only through Export CSV. When you save an endpoint, Chrome asks for permission to reach that origin."
+  },
+  "secAbout": {
+    "message": "What it does and what it does not do"
+  },
+  "about1": {
+    "message": "Opens the “Who viewed your profile” page once a day in a background tab, reads it and closes it."
+  },
+  "about2": {
+    "message": "Stores name, headline, connection degree and roughly when each person viewed your profile."
+  },
+  "about3": {
+    "message": "Never stores passwords or cookies. Nothing leaves the browser except the list sent to the endpoint above, if you set one."
+  },
+  "about4": {
+    "message": "People browsing in private mode never appear: LinkedIn does not show them to anyone."
+  },
+  "about5": {
+    "message": "Automated reading of LinkedIn pages goes against the LinkedIn User Agreement. You run it at your own risk, on your own account."
+  },
+  "btnSave": {
+    "message": "Save"
+  },
+  "btnFlush": {
+    "message": "Send pending now"
+  },
+  "msgInvalidUrl": {
+    "message": "Invalid address."
+  },
+  "msgNeedHttps": {
+    "message": "The address must start with https."
+  },
+  "msgNoPermission": {
+    "message": "Without that permission the extension cannot send to this address."
+  },
+  "msgSaved": {
+    "message": "Saved."
+  },
+  "msgSending": {
+    "message": "Sending…"
+  },
+  "msgNoResponse": {
+    "message": "No response from the extension."
+  },
+  "msgSent": {
+    "message": "$COUNT$ sent.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "msgNothing": {
+    "message": "Nothing pending."
+  },
+  "msgNoEndpoint": {
+    "message": "$COUNT$ pending, but no endpoint is set.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "msgRejected": {
+    "message": "The endpoint rejected the request ($STATUS$). Pending items stay in the queue.",
+    "placeholders": {
+      "status": {
+        "content": "$1",
+        "example": "500"
+      }
+    }
+  },
+  "msgNoNetwork": {
+    "message": "no network"
+  }
+}

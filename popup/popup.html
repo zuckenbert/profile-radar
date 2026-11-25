@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Profile Radar</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+  body { width: 380px; height: 580px; display: flex; flex-direction: column; }
+  body > * { flex: none; }
+  .stats { display: grid; grid-template-columns: 1.15fr 1fr 1fr; border-bottom: 1px solid var(--rule); }
+  .stat { padding: 14px 16px 12px; border-right: 1px solid var(--rule); }
+  .stat:last-child { border-right: 0; }
+  .stat .num { font-size: 26px; font-weight: 500; line-height: 1; display: block; margin-bottom: 6px; }
+  .stat.hot .num { display: inline-block; box-shadow: inset 0 -9px 0 var(--accent-soft); padding: 0 2px; }
+  .stat .eyebrow { color: var(--muted); display: block; }
+
+  .status { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 16px; background: var(--bg-alt); font-weight: 500; font-size: 11.5px; color: var(--muted); }
+  .status > span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .warn { padding: 9px 16px; border-bottom: 1px solid var(--rule); border-left: 3px solid var(--accent); font-size: 12px; }
+  .warn b { font-weight: 600; }
+
+  .tabs { display: flex; gap: 16px; padding: 12px 16px 0; border-bottom: 1px solid var(--rule); }
+  .tab { font-family: var(--sans); font-weight: 600; font-size: 12px; background: none; border: 0; padding: 0 0 9px; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+  .tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+
+  body > .list { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+  .row { display: grid; grid-template-columns: 34px 1fr auto; gap: 10px; align-items: center; padding: 10px 16px; border-bottom: 1px solid var(--bg-alt); text-decoration: none; color: inherit; }
+  a.row:hover { background: var(--bg-alt); }
+  .avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--bg-alt); object-fit: cover; display: grid; place-items: center; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .who { min-width: 0; }
+  .who .name { font-weight: 600; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .who .name .deg { font-family: var(--mono); font-weight: 400; font-size: 10px; color: var(--muted); margin-left: 5px; }
+  .who .head { font-size: 11.5px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .when { text-align: right; font-family: var(--mono); font-size: 10.5px; color: var(--muted); white-space: nowrap; }
+  .tag { display: inline-block; font-family: var(--mono); font-size: 9px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); border-radius: 3px; padding: 0 4px; margin-bottom: 3px; }
+  .empty { padding: 28px 24px 30px; text-align: center; }
+  .empty h3 { font-size: 15px; margin-bottom: 6px; }
+  .empty p { margin: 0; color: var(--muted); }
+
+  .foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 12px 16px; border-top: 1px solid var(--rule); }
+  .foot .left { display: flex; gap: 8px; }
+  .foot a { font-weight: 500; font-size: 11.5px; color: var(--muted); }
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="bar">
+      <span class="brand"><img src="../img/icon32.png" alt=""><span class="wordmark" data-i18n="extName">Profile Radar</span></span>
+      <span class="eyebrow" data-i18n="popupEyebrow">LinkedIn · daily</span>
+    </div>
+    <h1 data-i18n="popupHeading">Who viewed your profile</h1>
+    <div class="sub" id="sub" data-i18n="popupSub">Read automatically from LinkedIn, once a day.</div>
+  </header>
+
+  <section class="stats" data-i18n-aria-label="statsLabel" aria-label="Summary">
+    <div class="stat hot"><span class="num" id="n-week">0</span><span class="eyebrow" data-i18n="statWeek">Last 7 days</span></div>
+    <div class="stat"><span class="num" id="n-stored">0</span><span class="eyebrow" data-i18n="statStored">Stored</span></div>
+    <div class="stat"><span class="num" id="n-total">·</span><span class="eyebrow" data-i18n="statTotal">On LinkedIn</span></div>
+  </section>
+
+  <div class="status"><span id="status-run"><span class="dot"></span>No reads yet</span><span id="status-push"></span></div>
+  <div class="warn" id="warn" hidden></div>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab" role="tab" data-tab="recent" aria-selected="true" data-i18n="tabRecent">Recent</button>
+    <button class="tab" role="tab" data-tab="returning" aria-selected="false" data-i18n="tabReturning">Returning</button>
+    <button class="tab" role="tab" data-tab="anonymous" aria-selected="false" data-i18n="tabAnonymous">Anonymous</button>
+  </nav>
+  <main class="list" id="list"></main>
+
+  <footer class="foot">
+    <div class="left">
+      <button class="btn" id="run" data-i18n="btnReadNow">Read now</button>
+      <button class="btn ghost" id="csv" data-i18n="btnCsv">Export CSV</button>
+    </div>
+    <a href="#" id="opts" data-i18n="linkSettings">Settings</a>
+  </footer>
+  <script src="../lib/messages-en.js"></script>
+  <script src="../lib/i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

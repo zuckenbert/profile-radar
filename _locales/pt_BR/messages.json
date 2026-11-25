@@ -1,0 +1,312 @@
+{
+  "extName": {
+    "message": "Profile Radar"
+  },
+  "extShortName": {
+    "message": "Profile Radar"
+  },
+  "extDescription": {
+    "message": "Guarda quem viu o seu perfil no LinkedIn. Só leitura, uma vez por dia, dentro do seu próprio navegador."
+  },
+  "popupEyebrow": {
+    "message": "LinkedIn · diário"
+  },
+  "popupHeading": {
+    "message": "Quem viu o seu perfil"
+  },
+  "popupSub": {
+    "message": "Leitura automática do LinkedIn, uma vez por dia."
+  },
+  "popupSubOwner": {
+    "message": "Perfil de $OWNER$ · leitura uma vez por dia.",
+    "placeholders": {
+      "owner": {
+        "content": "$1",
+        "example": "Alex Kim"
+      }
+    }
+  },
+  "statsLabel": {
+    "message": "Resumo"
+  },
+  "statWeek": {
+    "message": "Últimos 7 dias"
+  },
+  "statStored": {
+    "message": "Guardados"
+  },
+  "statTotal": {
+    "message": "No LinkedIn"
+  },
+  "statusNever": {
+    "message": "Ainda sem leitura"
+  },
+  "statusLast": {
+    "message": "Última leitura $AGO$ · $COUNT$ novos",
+    "placeholders": {
+      "ago": {
+        "content": "$1",
+        "example": "2h ago"
+      },
+      "count": {
+        "content": "$2",
+        "example": "3"
+      }
+    }
+  },
+  "errLoggedOut": {
+    "message": "LinkedIn deslogado"
+  },
+  "errEmptyList": {
+    "message": "A lista não carregou"
+  },
+  "errNoResponse": {
+    "message": "A página não respondeu"
+  },
+  "errGeneric": {
+    "message": "A leitura falhou"
+  },
+  "pushLocalOnly": {
+    "message": "Só neste navegador"
+  },
+  "pushRejected": {
+    "message": "Destino recusou ($STATUS$)",
+    "placeholders": {
+      "status": {
+        "content": "$1",
+        "example": "500"
+      }
+    }
+  },
+  "pushNetwork": {
+    "message": "rede"
+  },
+  "pushQueued": {
+    "message": "$COUNT$ na fila",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "pushUpToDate": {
+    "message": "Destino em dia"
+  },
+  "warnGapTitle": {
+    "message": "Pode ter ficado gente para trás."
+  },
+  "warnGapBody": {
+    "message": "Clique em Ler agora para completar a lista."
+  },
+  "tabRecent": {
+    "message": "Recentes"
+  },
+  "tabReturning": {
+    "message": "Voltaram"
+  },
+  "tabAnonymous": {
+    "message": "Sem nome"
+  },
+  "emptyRecentTitle": {
+    "message": "Nada por aqui ainda"
+  },
+  "emptyRecentBody": {
+    "message": "Abra o LinkedIn e clique em Ler agora para a primeira leitura."
+  },
+  "emptyReturningTitle": {
+    "message": "Ninguém voltou ainda"
+  },
+  "emptyReturningBody": {
+    "message": "Quem visitar o perfil mais de uma vez aparece aqui."
+  },
+  "emptyAnonymousTitle": {
+    "message": "Nenhum visitante sem nome"
+  },
+  "emptyAnonymousBody": {
+    "message": "Quem navega em modo semiprivado aparece só com cargo ou empresa."
+  },
+  "unnamedViewer": {
+    "message": "Visitante sem nome"
+  },
+  "tagVisits": {
+    "message": "$COUNT$ visitas",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "tagNew": {
+    "message": "novo"
+  },
+  "agoNow": {
+    "message": "agora"
+  },
+  "agoHours": {
+    "message": "há $N$ h",
+    "placeholders": {
+      "n": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "agoDays": {
+    "message": "há $N$ d",
+    "placeholders": {
+      "n": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "agoWeeks": {
+    "message": "há $N$ sem",
+    "placeholders": {
+      "n": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "agoMonths": {
+    "message": "há $N$ meses",
+    "placeholders": {
+      "n": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "btnReadNow": {
+    "message": "Ler agora"
+  },
+  "btnReading": {
+    "message": "Lendo…"
+  },
+  "btnCsv": {
+    "message": "Baixar CSV"
+  },
+  "linkSettings": {
+    "message": "Ajustes"
+  },
+  "optionsHeading": {
+    "message": "Ajustes"
+  },
+  "optionsSub": {
+    "message": "A extensão só lê a sua própria lista de visitantes. Não clica, não envia mensagem e não visita perfis."
+  },
+  "secReading": {
+    "message": "Leitura"
+  },
+  "optEnabled": {
+    "message": "Ler uma vez por dia, automaticamente"
+  },
+  "optOwner": {
+    "message": "De quem é este perfil"
+  },
+  "optOwnerPlaceholder": {
+    "message": "Nome que aparece no painel (opcional)"
+  },
+  "optHourFrom": {
+    "message": "A partir de (hora)"
+  },
+  "optHourTo": {
+    "message": "Até (hora)"
+  },
+  "optWindowHint": {
+    "message": "O horário exato é sorteado dentro desta janela, todo dia. Se o LinkedIn não estiver aberto até 3 horas depois desse horário, a leitura acontece assim mesmo numa aba em segundo plano."
+  },
+  "secDestination": {
+    "message": "Destino (opcional)"
+  },
+  "optEndpoint": {
+    "message": "Endereço HTTPS que recebe os novos visitantes"
+  },
+  "optToken": {
+    "message": "Token Bearer (opcional)"
+  },
+  "optTokenPlaceholder": {
+    "message": "Enviado como Authorization: Bearer <token>"
+  },
+  "optDestHint": {
+    "message": "Sem destino, a lista fica só neste navegador e sai apenas pelo botão Baixar CSV. Ao salvar um destino, o Chrome pede permissão para acessar esse endereço."
+  },
+  "secAbout": {
+    "message": "O que ela faz e o que não faz"
+  },
+  "about1": {
+    "message": "Abre a página “Quem viu seu perfil” uma vez por dia, numa aba em segundo plano, lê e fecha em seguida."
+  },
+  "about2": {
+    "message": "Guarda nome, título, grau de conexão e, aproximadamente, quando cada pessoa visitou o seu perfil."
+  },
+  "about3": {
+    "message": "Não guarda senha nem cookie. Nada sai do navegador além da lista enviada ao destino acima, se você configurar um."
+  },
+  "about4": {
+    "message": "Quem navega em modo privado nunca aparece: o LinkedIn não mostra essas pessoas para ninguém."
+  },
+  "about5": {
+    "message": "A leitura automatizada de páginas do LinkedIn vai contra o Contrato do Usuário do LinkedIn. Você usa por sua conta e risco, na sua própria conta."
+  },
+  "btnSave": {
+    "message": "Salvar"
+  },
+  "btnFlush": {
+    "message": "Enviar pendentes agora"
+  },
+  "msgInvalidUrl": {
+    "message": "Endereço inválido."
+  },
+  "msgNeedHttps": {
+    "message": "O endereço precisa começar com https."
+  },
+  "msgNoPermission": {
+    "message": "Sem essa permissão, a extensão não consegue enviar para esse endereço."
+  },
+  "msgSaved": {
+    "message": "Salvo."
+  },
+  "msgSending": {
+    "message": "Enviando…"
+  },
+  "msgNoResponse": {
+    "message": "Sem resposta da extensão."
+  },
+  "msgSent": {
+    "message": "$COUNT$ enviados.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "msgNothing": {
+    "message": "Nada pendente."
+  },
+  "msgNoEndpoint": {
+    "message": "$COUNT$ pendentes, mas falta o endereço de destino.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "msgRejected": {
+    "message": "O destino recusou o envio ($STATUS$). Os pendentes continuam na fila.",
+    "placeholders": {
+      "status": {
+        "content": "$1",
+        "example": "500"
+      }
+    }
+  },
+  "msgNoNetwork": {
+    "message": "sem rede"
+  }
+}
